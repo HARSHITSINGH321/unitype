@@ -1,0 +1,164 @@
+*{
+    --dark: #1B262C;
+    --yellow: #FABEA7;
+    --green: #0F9D58;
+  }
+  
+  body{
+    height: 100vh;
+    background:  #1B262C !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card{
+    color:  #1B262C ;
+    background-color:  #1B262C;
+    border: 0 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .img-left{
+    width: 45%;
+    background: green;
+    /* background: url('harpal-singh-JZizuAfcpr8-unsplash.jpg') ; */
+    background-size:cover;
+    border-radius: 15px 0px 0px 15px ;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .card-body{
+    padding: 2rem;
+  }
+  
+  .title{
+    margin-bottom: 2rem;
+  }
+  
+  .form-input{
+    position: relative;
+  }
+  
+  .form-input input{
+    width: 100%;
+    color: white;
+    height: 45px;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    box-shadow: none;
+    border: 1px solid var(--green);
+    border-radius: 50px;
+    outline: none;
+    background: transparent;
+  }
+  
+  .form-input span{
+    position: absolute;
+    top: 10px;
+    padding-left: 15px;
+    color: var(--yellow);
+  }
+  
+  .form-input input::placeholder{
+    color:#fff;
+    padding-left: 0px;
+  }
+  
+  .form-input input:focus, .form-input input:valid{
+    border: 2px solid var(--yellow);
+  }
+  
+  .form-input input:focus::placeholder{
+    color:#fff ;
+  }
+  
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+    background-color: var(--yellow) !important;
+    border: 0px;
+  }
+  
+  .form-box button[type="submit"]{
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: rgb(54,54,54);
+    color: #fff;
+    font-size: 90%;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    transition: 0.5s;
+    padding: 12px;
+  }
+  
+  
+  .form-box button[type="submit"]:hover{
+    background:#fff";
+  }
+  
+  .forget-link, .register-link{
+    color: var(--green);
+    font-weight: bold;
+  }
+  .register-link{
+    position: relative;
+  
+  }
+  
+  .forget-link:hover, .register-link:hover{
+    color: var(--yellow);
+    text-decoration: none;
+  }
+  /* .form-box .btn-social{
+    color: white !important;
+    border: 0;
+    font-weight: bold;
+  } */
+  
+  /* .fa {
+    padding: 6px;
+    font-size: 90px;
+    font-size: 2px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 8px 0 px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 1;
+  } */
+  
+  /* .fa-facebook {
+    background: #3B5998;
+    color: white;
+    
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  } */
+  .text{
+    align-items:center;
+    justify-content: center; 
+    font-size: 4rem;
+    font-weight: bold;
+    padding-left: 30px;
+  }
+  .options{
+    display: flex;
+    /* background-color: red; */
+    justify-content:space-between;
+  }

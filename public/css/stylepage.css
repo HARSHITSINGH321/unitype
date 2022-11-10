@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&family=Open+Sans:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&family=Nunito:wght@200;600&family=Open+Sans:wght@300;600&display=swap');
+@font-face {
+  font-family: Cascadia;
+  src: url("fonts/CascadiaCode.ttf");
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+}
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  --dark:#1B262C;
+  --yellow:#FABEA7;
+  --green: #0F9D58;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #1B262C;
+  font-family: 'Lato', sans-serif;
+  transition: .2s;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  flex-direction: column;
+  margin: 0 0px;/* vertical, hrizontal */
+}
+
+.keyboard_wrapp {
+  max-width: 1008px;
+  width: 100%;
+  background-color: #e7e7e7;
+  overflow: hidden;
+  position: relative;
+  order: 2;
+  border-radius: 6px;
+}
+
+.row {
+  display: flex;
+}
+
+.keys {
+  width: 60px;
+  height: 47px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1px;
+  transition: .2s;
+  z-index: 5;
+  border-radius: 5px;
+}
+
+.backspace_key {
+  width: 120px;
+}
+
+.tab_key {
+  width: 90px;
+}
+
+.slash_key {
+  width: 90px;
+}
+
+.caps_lock_key {
+  width: 128px;
+}
+
+.enter_key {
+  width: 120px;
+}
+
+.shift_key {
+  width: 124px;
+}
+
+.space_key {
+  max-width: 600px;
+  width: 100%;
+}
+
+.keys.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.keys.remove {
+    animation: keys_animation 0.5s forwards ;
+}
+
+@keyframes keys_animation {
+    0% {
+        background-color: #333;
+        color: #fff;
+    }
+    100% {
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+body.active {
+    background-color: black;
+}
+
+.night_mode {
+  border:1px white solid;
+  width: 60px;
+  height: 30px;
+  background-color:#fff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.night_mode.active {
+    background-color: rgb(54, 54, 54);
+}
+
+.toggle_circle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(54,54,54);
+    border-radius: 50px;
+    margin: 0 5px;
+    position: absolute;
+    left: 0;
+    transition: .2s;
+}
+
+.toggle_circle.active {
+    left: 44%;
+    background-color: #fff;
+}
+
+.keyboard_wrapp.active {
+    background-color: var(--dark);
+}
+
+.keys.keys_night {
+    background-color: #3c3c3c;
+    color: #fff;
+}
+
+
+
+.keys.keys_night.active {
+    background-color: #fff;
+    color: #333;
+}
+
+.keys.keys_night.remove {
+    animation: keys_night_animation 0.5s forwards;
+}
+
+@keyframes keys_night_animation {
+    0%{
+        background-color: #fff;
+        color: #000;
+    }
+    100% {
+        background-color: #333;
+        color: #fff;
+    }
+}
+
+.colors_input {
+  width: 40px;
+  height: 44px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.colors_input::-webkit-color-swatch{
+  border-radius: 300px;
+}
+
+.keyboard_lights {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+.nighttogglediv{
+  scale: 0.9;
+  position: relative;
+  top: 18%;
+}
+
+.change_light_color {
+  height: 100%;
+  position: relative;
+  top: 2px;
+  scale: 1;
+}
+
+
+#sessiontimediv{
+  position: relative;
+  top: 25%;
+}
+#feature{
+  font-family: cascadia;
+  background: transparent;
+  color: black;
+}
+.selectwrapper{
+  position: relative;
+  top:3px;
+  border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+  background:#cccccc;
+  border:1px solid #cccccc;
+}
+#second{
+  border:0px;
+  outline:none;
+}
+#feature option{
+  color: black;
+  /* font-weight: 600; */
+  font-family: Cascadia;
+}
+
+
+
+
+
+#lessondiv{
+  position: relative;
+  top:25%;
+}
+#rowtype{
+  font-family: cascadia;
+  background: transparent;
+  color: black;
+}
+
+#rowtype option{
+  color: black;
+  font-family: Cascadia;
+}
+#keys{
+  border:0px;
+  outline:none;
+}
+.lessonwrapper{
+  position: relative;
+  top:3px;
+  border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+  background:#cccccc;
+  border:1px solid #cccccc;
+}
+
+
+
+
+header{
+  top: 0;
+  height: 50px;
+  position: absolute;
+  width: 100%;
+  background: var(--green);
+}
+
+
+.headeritem{
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  position: absolute;
+  height: 100%;
+  right: 0px;
+  width: 600;
+  max-width:540px;
+  display: flex;
+  justify-content: space-around;
+}
+.linksdiv{
+  font-size: 2rem;
+  font-family: cascadia;
+  font-weight: bold;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+}
+#lessonlink{
+  margin-left: 10px;
+}
+a{
+  padding: 0 5px;
+}
+a:visited {
+color: black;
+  ;
+}
+a:hover {
+    color: var(--yellow);  
+
+}
+a:active {
+  color: var(--yellow);
+}
+.loginregisterdiv{
+  display: flex;
+  align-items: center;
+  font-family: cascadia;
+}
+
+
+
+
+
+
+/* SHUBHAM CSS */
+.typing-text p span.correct{
+  color:#FABEA7;
+}
+
+.typing-text p span.incorrect{
+  color:rgb(255, 0, 0);
+  /* outline: 1px solid white; */
+  /* background: rgb(255, 204, 204); */
+  background: #1B262C;
+  border-radius: 4px;
+}
+
+/* //custom decrapitation
+.typing-text p span.active{
+  color: black;
+} */
+
+.typing-text p span.active::before{
+  content:"";
+  pointer-events:none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height:1.4rem; 
+  width: 8%;
+  opacity: 1;
+  background: white;
+  transition-duration:1s;
+}
+
+/* @keyframes linear{
+
+
+} */
+
+.typing-text p span{
+  position:relative;
+}
+
+/* the major block where everything is */
+.wrapper{
+  margin-top:3rem;
+  min-width: 500px;
+  width: 800px;
+  border-radius: 10px;
+  /* border: red 1px solid; */
+}
+
+.wrapper .content-box{
+  background: var(--dark);
+  border-radius: 8px;
+  padding:0rem 0.5rem;
+  /* border:3px solid black; */
+}
+
+
+/* MAIN TEXTS */
+.wrapper .content-box .typing-text{
+  background: #1B262C;
+  max-height:60%;
+  overflow-y :auto;
+  
+}
+.typing-text::-webkit-scrollbar{
+  display: none;
+}
+
+.wrapper .content-box .typing-text p{
+  font-size: 1.1rem;
+  color: grey;/*paragraph text color */
+  text-align:justify;
+  word-break:break-word;/*if a word does not fit in the line it will be shifted on the next line */
+  font-family: Cascadia;
+  white-space: wrap;
+}
+
+.content{
+  display: flex;
+  /* justify-content: space-evenly; does nothing*/
+  margin-top: 1rem;
+  border-top: 3px solid black;
+  padding:1rem 0rem;
+  background: var(--dark);
+  align-items: center;
+}
+
+.result-details{
+  display: flex;
+  justify-content:space-around;
+  width: 100%;
+}
+
+
+/* .result-details li:not(:first-child){
+  border-left: 1px solid red;
+  padding-left: 20px;
+}padding and border is cutom decapricated*/
+
+
+/* R E S U L T */
+li{
+  background: #1B262C;/* result color */
+  display: flex;
+  list-style: none;
+  padding-right: 0rem;
+  height: 3rem;
+  align-items: center;
+  color: lightgrey;
+  font-family: montserrat,sans-serif;
+}
+
+.result-details li p{
+  font-weight: 600;
+  font-size: 1rem;
+}
+.result-details li span{
+  display: block;
+  margin-left: 4px;
+  background: #1B262C;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+button{
+  border: none;
+  outline :none;
+  width: 5rem;
+  background: var(--green);
+  color: #1B262C;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  padding: 0rem 0.25rem;
+  transition: transform 0.3s ease;
+  font-family: Nunito,sans-serif;
+  font-weight: 600;
+}
+
+button:active{
+  transform: scale(0.97);
+}
+
+
+.input-field{
+  width:0;
+  height: 0;
+  position: absolute;
+  left:-100%;
+  top: 0px;
+}

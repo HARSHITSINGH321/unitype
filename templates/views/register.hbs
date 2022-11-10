@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registration Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="css\styleReg.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row px-3">
+      <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
+        <div class="img-left d-none d-md-flex text">Hello! , Welcome to uniType</div>
+
+        <div class="card-body" style="background-color: #1B262C">
+          <h4 class="title text-center mt-4">
+            <span style="color:#fff">Register Into Account</span>
+          </h4>
+          <form class="form-box px-3" method="POST" action="/register">
+            <div class="form-input">
+              <span><i class="fa fa-user-circle" style="color:#fff"></i></span>
+              <input type="text" name="firstname" placeholder="firstname*" tabindex="10" required>
+            </div>
+            <div class="form-input" style="color:#fff">
+              <span><i class="fa fa-user-circle" style="color:#fff"></i></span>
+              <input type="text" placeholder="Last Name *" value="" name="lastname">
+            </div>
+            <div class="form-input" style="color:#fff">
+              <span><i class="fa fa-envelope-o" style="color:#fff"></i></span>
+              <input type="email" placeholder="Your Email *" value="" name="email">
+            </div>
+            <div class="form-input" style="color:#fff">
+              <span><i class="fa fa-key" style="color:#fff"></i></span>
+              <input type="password" placeholder="Password *" value="" name="password">
+            </div>
+            <div class="form-input" style="color:#fff">
+              <span><i class="fa fa-key" style="color:#fff"></i></span>
+              <input type="password" placeholder="Password *" value="" name="confirmpassword">
+            </div>
+
+            <div class="mb-3" style="color:#fff">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="cb1" name="">
+                <label class="custom-control-label" for="cb1">Remember me</label>
+              </div>
+            </div>
+
+            <div class="mb-3" style="color:#fff">
+              <button type="submit" class="btn btn-block text-uppercase">
+                Register
+              </button>
+            </div>
+
+
+            <!-- <div class="text-center mb-3">
+              or login with
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-4">
+                <a href="#" class="fa fa-facebook" style="margin-left: 50%">
+                </a>
+              </div>
+
+              <div class="col-4">
+                <a href="#" class="fa fa-linkedin" style="margin-left: 20%">
+                </a>
+              </div> -->
+
+            <div class="col-4">
+              <!-- <a href="#" class="fa fa-twitter"   style="margin-right: 96%">
+                </a> -->
+            </div>
+        </div>
+
+      </div>
+      </form>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+
+</html>

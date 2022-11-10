@@ -1,0 +1,37 @@
+.register h1{
+    text-align: -webkit-center;
+    color: aliceblue;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.form-horizontal {
+    color: azure;
+}
+body{
+    background-image: url(christian-wiediger-WkfDrhxDMC8-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 800px;
+}
+.check{
+    color: aquamarine;
+    font-weight: 100;
+    padding-right: 20px;
+}
+.container{
+    padding-left: 50%;
+    padding-right: 5%;
+}
+.register{
+    padding-top: 20px;
+}
+.reg{
+    padding-top: 40px;
+    background-color: rgba(0,0,0,0.5);
+    border: 2px solid #DEF5E5;
+    border-radius: 10px;
+}
+.form-group{
+    background-color: transparent;
+    border: none;
+}
