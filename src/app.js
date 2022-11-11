@@ -49,6 +49,15 @@ app.get("/login", (req, res) => {
 app.get("/userMain", auth , (req, res) => {
     res.render("userMain");
 });
+app.get("/userDictation", auth , (req, res) => {
+    res.render("userDictation");
+});
+app.get("/userGame", auth , (req, res) => {
+    res.render("userGame");
+});
+app.get("/userPage", auth , (req, res) => {
+    res.render("userPage");
+});
 
 app.get("/logout", auth, async(req,res) => {
     try {
@@ -84,6 +93,8 @@ app.get("/game", (req, res) => {
 app.get("/page", (req, res) => {
     res.render("page");
 });
+
+
 
 app.post('/register', async (req, res) => {
     try {
@@ -140,7 +151,6 @@ app.post("/login", async (req, res) => {
 
 
         res.cookie("jwt", token, {
-            expires: new Date(Date.now() + 30000),
             httpOnly: true,
         });
 

@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&family=Nunito:wght@200;600&family=Open+Sans:wght@300;600&display=swap');
 @font-face {
   font-family: Cascadia;
-  src: url("fonts/CascadiaCode.ttf");
+  src: url(CascadiaCode.ttf);
 }
 
 ::-webkit-scrollbar {
@@ -33,13 +33,13 @@ body{
   overflow-y: hidden;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap);
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 2.8rem;
   flex-direction: column;
   margin: 0 0px;
   /* vertical, hrizontal */
