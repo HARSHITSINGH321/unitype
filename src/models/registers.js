@@ -37,7 +37,7 @@ playerSchema.methods.generateAuthToken = async function () {
 
     try {
         console.log(this._id);
-        const token = jwt.sign({ _id: this._id.toString()}, "HI kd");
+        const token = jwt.sign({ _id: this._id.toString()}, "hi I am Kd");
         this.tokens = this.tokens.concat({ token: token })
         await this.save();
         return token;

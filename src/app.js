@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const path = require("path");
 const app = express();
@@ -5,6 +6,8 @@ const bodyParser = require("body-Parser");
 const hbs = require("hbs");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const cookieParser = require("cookie-parser");
+const auth = require("./middleware/auth");
 
 require("./db/conn");
 const Register = require("./models/registers");
@@ -23,6 +26,7 @@ const partials_path = path.join(__dirname, "../templates/partials");
 
 
 app.use(express.json());
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(static_path));
@@ -41,6 +45,28 @@ app.get("/register", (req, res) => {
 app.get("/login", (req, res) => {
     res.render("login");
 });
+
+app.get("/userMain", auth , (req, res) => {
+    res.render("userMain");
+});
+
+app.get("/logout", auth, async(req,res) => {
+    try {
+        console.log(req.user);
+        req.user.tokens = req.user.tokens.filter((currElement) => {
+                return currElement.token != req.token;
+        })
+
+        res.clearCookie("jwt");
+
+        console.log("logout successfully");
+
+        await req.user.save();
+        res.render("login");
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
 
 app.get("/LB", (req, res) => {
     res.render("LB");
@@ -72,7 +98,7 @@ app.post('/register', async (req, res) => {
                 password: req.body.password,
                 confirmpassword: cpassword
             })
-            
+
             console.log("the success part" + registerEmployee);
             const token = await registerEmployee.generateAuthToken();
             console.log("the token part" + token);
@@ -83,13 +109,10 @@ app.post('/register', async (req, res) => {
                 httpOnly: true
             });
 
-            console.log(cookie);
-
-
             const registered = await registerEmployee.save();
             console.log("the page part " + registered);
 
-            res.status(201).render("index");
+            res.status(201).render("login");
         }
         else {
             res.send("Password does not match ");
@@ -120,10 +143,9 @@ app.post("/login", async (req, res) => {
             expires: new Date(Date.now() + 30000),
             httpOnly: true,
         });
-        
 
         if (validPassword) {
-            res.status(201).render("main");
+            res.status(201).render("userMain");
         } else {
             res.status(400).json({ error: "Invalid Password" });
         }
